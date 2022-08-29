@@ -1,0 +1,32 @@
+﻿@page "/fetchdata"
+@using Page = TorahGatedCommunityDNF6.Links.WeatherForecast
+@inject HttpClient Http
+<PageTitle>@Page.Title</PageTitle>
+
+<div class="pb-2 mt-4 mb-2 border-bottom">
+	<h2><i class="@Page.Icon"></i> @Page.Title</h2>
+</div>
+
+<div class="card mb-3 border-warning">
+	<div class="card-header">
+		<h4 class="card-title text-center">Forecast Table</h4>
+	</div>
+	<div class="card-body">
+		<TableTemplate Items="forecasts">
+			<TableHeader>
+				<th>Date</th>
+				<th>Temp. (C)</th>
+				<th>Temp. (F)</th>
+				<th>Summary</th>
+			</TableHeader>
+			<RowTemplate>
+				<td>@context.Date.ToShortDateString()</td>
+				<td>@context.TemperatureC</td>
+				<td>@context.TemperatureF</td>
+				<td>@context.Summary</td>
+			</RowTemplate>
+		</TableTemplate>
+	</div>
+</div>
+
+

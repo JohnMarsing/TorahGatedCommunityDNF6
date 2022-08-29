@@ -1,17 +1,33 @@
 ﻿@inherits LayoutComponentBase
-
+@using Page = TorahGatedCommunityDNF6.Links.Account
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
+	<div class="sidebar">
+		<NavMenu />
+	</div>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+	<main>
+		<div class="top-row px-4">
+			<i class="@Page.Login.Icon"></i><a href="@Page.Login.Index">@Page.Login.Title</a>
+
+@*
+			<AuthorizeView>
+				<Authorized>
+					Hello, @context.User.Identity.Name!
+					<span class="oi oi-account-logout"></span><a href="/.auth/logout?post_logout_redirect_uri=/">Log out</a>
+				</Authorized>
+				<NotAuthorized>
+					<span class="oi oi-account-login"></span><a href="/login-providers">Log in</a>
+				</NotAuthorized>
+			</AuthorizeView>
+*@
+
+		</div>
+
+		<article class="content px-4">
+			@Body
+		</article>
+
+	</main>
+
 </div>
