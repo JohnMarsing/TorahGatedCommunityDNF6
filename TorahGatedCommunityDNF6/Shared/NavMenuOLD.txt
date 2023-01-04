@@ -18,12 +18,6 @@
 		</div>
 
 		<div class="nav-item px-3">
-			<NavLink class="nav-link" href="@LinksProducts.List.Index" Match="NavLinkMatch.All">
-				<i class="@LinksProducts.List.Icon" aria-hidden="true"></i>&nbsp;@LinksProducts.List.Title
-			</NavLink>
-		</div>
-
-		<div class="nav-item px-3">
 			<NavLink class="nav-link" href="@Podcast.Index" Match="NavLinkMatch.All">
 				<i class="@Podcast.Icon" aria-hidden="true"></i>&nbsp;@Podcast.Title
 			</NavLink>

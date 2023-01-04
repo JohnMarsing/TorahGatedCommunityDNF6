@@ -19,7 +19,7 @@
 				<NotAuthorized>
 					<span class="oi oi-account-login"></span><a href="/login-providers">Log in</a>
 				</NotAuthorized>
-			</AuthorizeView>  
+			</AuthorizeView>
 *@
 
 		</div>
