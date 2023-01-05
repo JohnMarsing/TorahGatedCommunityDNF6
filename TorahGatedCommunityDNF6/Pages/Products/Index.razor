@@ -24,8 +24,8 @@
 
 @code {
     private string errorMessage = "";
-    private IEnumerable<Product> products;
-    private Product productToDelete;
+    private IEnumerable<Product>? products;
+    private Product? productToDelete;
     private bool showModal;
     private string modalMessage = "";
 
@@ -64,7 +64,7 @@
 
     private async Task DeleteFromModal()
     {
-        await http.DeleteAsync($"api/products/{productToDelete.Id}");
+        await http.DeleteAsync($"api/products/{productToDelete!.Id}");
         await HandleRefresh();
         productToDelete = null;
         showModal = false;

@@ -1,4 +1,10 @@
-﻿.menu-list .active-link,
+﻿@font-face {
+	font-family: 'david';
+	src: url('../fonts/david.ttf') format('truetype');
+}
+
+
+.menu-list .active-link,
 .menu-list .router-link-active {
 	color: #fff;
 	background-color: #00b3e6;
@@ -194,4 +200,66 @@ body {
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.hangingIndentEngXs {
+	font-size: 1.2em;
+	text-align: left;
+	font-weight: normal;
+	font-variant: normal;
+	color: #333333;
+}
+
+.hebrew {
+	font-size: 16.0pt;
+	font-family: david;
+	direction: rtl;
+}
+
+.hebrew.medium {
+	font-size: 20.0pt;
+	font-family: david;
+	color: black;
+}
+
+/*(N)ot (R)oot (L)etter*/
+.nrl {
+	color: #b9b9b9;
+}
+
+.btn-group-xs > .btn, .btn-xs {
+	padding: .25rem .4rem;
+	font-size: .875rem;
+	line-height: .5;
+	border-radius: .2rem;
+}
+
+/*color: #800000;*/
+.at-red {
+	color: #ff0000;
+}
+
+.tlat {
+	color: blue;
+	font-size: small;
+	vertical-align: super;
+	/*visibility:visible*/
+}
+
+.tlit {
+	color: darkgray;
+	font-style: italic;
+	font-size: small;
+	vertical-align: super;
+}
+
+
+.tlat-table {
+	color: blue;
+}
+
+.tlit-table {
+	color: darkgray;
+	font-style: italic
+	/*visibility:collapse;*/
 }

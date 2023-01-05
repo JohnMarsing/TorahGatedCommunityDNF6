@@ -1,0 +1,44 @@
+﻿
+@if (Words != null)
+{
+	<div class="table-responsive">
+		<table class="table table-condensed">
+			<thead>
+				<tr>
+					<th>H#</th>
+					<th>
+						<span class="tlat-table">Translation</span><br />
+						<span class="tlit-table">Transliteration</span>
+					</th>
+					<th class="text-end">Hebrew</th>
+					<th class="text-center">#</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				@foreach (var item in Words)
+				{
+					<tr>
+						<td>@item.StrongsAnchor</td>
+						<td>
+							<span class="tlat-table">@item.KjvWordSplit</span> <br />
+							<span class="tlit-table">@item.TransliterationMU</span>
+						</td>
+						<td dir="rtl" lang="he" class="hebrew.medium"> @((MarkupString)item.Hebrew!)</td>
+						<td class="text-center"><sub>@item.WordCount</sub></td>
+					</tr>
+				}
+			</tbody>
+
+		</table>
+
+	</div>
+
+}
+
+
+@*
+ @((MarkupString)BlueCheck)
+
+ <td class="text-center"><sub>@Html.DisplayFor(modelItem => item.WordCount)</sub></td>
+*@
